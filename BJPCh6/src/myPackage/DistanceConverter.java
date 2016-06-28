@@ -2,7 +2,7 @@
  * 
  */
 package myPackage;
-/** 
+/**
  * @author user
  *
  */
