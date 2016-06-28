@@ -5,6 +5,8 @@ package myPackage;
 
 import static org.junit.Assert.*;
 
+import java.util.Scanner;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,7 +18,11 @@ import org.junit.Test;
  *
  */
 public class JUnitTest {
-
+	// Class variables
+	static Scanner scanner;
+	int myIntA, myIntB, myIntC;
+	int[] myArrayA = {0,1,2};
+	Object myObject;
 	/**
 	 * @throws java.lang.Exception
 	 */
