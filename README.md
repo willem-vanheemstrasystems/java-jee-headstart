@@ -1,5 +1,5 @@
-# java-headstart
-Java - Headstart
+# java-jee-headstart
+Java JEE - Headstart
 
 
 Tip: View Java content in Chrome using the IE Tab extension https://techhelpkb.com/how-to-use-java-in-google-chrome/
