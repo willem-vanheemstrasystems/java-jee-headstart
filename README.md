@@ -12,4 +12,8 @@ BJPCh6 - DistanceConverter
 
 BJPCh6 - JUnitTest
 
+BJPCh7 - Account
+
+BJPCh7 - AccountManager
+
 BJPCh7 - Person
