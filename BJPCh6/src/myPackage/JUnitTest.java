@@ -111,7 +111,12 @@ public class JUnitTest {
 	
 	@Test
 	public void testAssertNotSame() {
-		
+		myObject  = new Object();
+		Object pointerA = new Object();
+		Object pointerB = myObject;
+		// pointerA is a new Object
+		// pointerB references myObject
+		assertNotSame(pointerA, pointerB);
 	}
 	
 }
