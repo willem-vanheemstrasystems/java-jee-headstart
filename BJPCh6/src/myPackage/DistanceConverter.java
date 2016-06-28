@@ -32,7 +32,7 @@ public class DistanceConverter {
 		return convertFeetToMeters(feet) * 100;
 	}
 	// Method
-	public static double convertCentimersToInches(double centimeters) {
+	public static double convertCentimetersToInches(double centimeters) {
 		return convertFeetToInches(convertCentimetersToFeet(centimeters));
 	}
 	// Method
