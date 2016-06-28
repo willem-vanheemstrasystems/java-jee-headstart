@@ -2,7 +2,7 @@ package myPackage;
 
 import java.math.BigDecimal;
 
-public class Account {
+public abstract class Account {
 	// Class variables
 	private String name;
 	private BigDecimal amount;
@@ -12,6 +12,7 @@ public class Account {
 		setAmount(startAmount);
 		// Allow for two decimals
 		this.amount.setScale(2, BigDecimal.ROUND_HALF_UP);
+		System.out.println("Account Created: " + this.getName());
 	}
 	// Method
 	public String getName(){
@@ -41,10 +42,11 @@ public class Account {
 			throw new IllegalArgumentException();
 		}
 		// If the amount is less than the desired amount, throw an exception
-		if(amount.compareTo(desiredAmount) < 0) {
+		if(this.getAmount().compareTo(desiredAmount) < 0) {
 			throw new IllegalArgumentException();	
 		}
-		this.amount = this.amount.subtract(desiredAmount);
+		this.setAmount(this.getAmount().subtract(desiredAmount).toString());
+		System.out.println("Withdrawal: " + this);
 	}
 	// Method
 	public void deposit(String deposit) throws IllegalArgumentException {
@@ -53,6 +55,12 @@ public class Account {
 		if(desiredAmount.compareTo(BigDecimal.ZERO) < 0){
 			throw new IllegalArgumentException();			
 		}
-		this.amount = this.amount.add(desiredAmount);
+		this.setAmount(this.getAmount().add(desiredAmount).toString());
+		System.out.println("Deposit: " + this);
+	}
+	// Method override
+	@Override
+	public String toString(){
+		return this.getName() + ": Balance = " + this.getAmount();
 	}
 }

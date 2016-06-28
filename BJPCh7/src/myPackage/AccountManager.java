@@ -1,20 +1,28 @@
 package myPackage;
 
-import java.math.BigDecimal;
-
 public class AccountManager {
 	// Method main
 	public static void main(String[] args) {
 		// Variables
-		Account account = new Account("FirstAccount", "10.00");
-		System.out.println("Account Created: " + account.getName());
-		System.out.println("Balance: " + account.getAmount());
+		// Polymorphism
+		Account savingsAccount = new SavingsAccount("FirstSavingsAccount", "10.00");
 		try{
-			account.withdraw("20.00");
+			savingsAccount.withdraw("5.00");
 		}catch(IllegalArgumentException iae){
 			System.out.println("Invalid Withdrawal");
-		}finally{
-			System.out.println("New Balance: " + account.getAmount());
 		}
+		// Polymorphism
+		Account checkingAccount = new CheckingAccount("FirstCheckingAccount", "10.00", 1);
+		try{
+			checkingAccount.withdraw("5.00");
+		}catch(IllegalArgumentException iae){
+			System.out.println("Invalid Withdrawal");
+		}
+		checkingAccount.deposit("500.00");
+		try{
+			checkingAccount.withdraw("5.00");
+		}catch(IllegalArgumentException iae){
+			System.out.println("Invalid Withdrawal");
+		}		
 	}
 }
