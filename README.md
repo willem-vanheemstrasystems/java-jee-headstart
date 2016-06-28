@@ -16,4 +16,8 @@ BJPCh7 - Account
 
 BJPCh7 - AccountManager
 
+BJPCh7 - CheckingAccount
+
 BJPCh7 - Person
+
+BJPCh7 - SavingsAccount
