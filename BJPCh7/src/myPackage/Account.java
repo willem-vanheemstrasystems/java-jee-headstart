@@ -2,7 +2,7 @@ package myPackage;
 
 import java.math.BigDecimal;
 
-public abstract class Account {
+public abstract class Account implements Accountable {
 	// Class variables
 	private String name;
 	private BigDecimal amount;
@@ -35,25 +35,25 @@ public abstract class Account {
 		this.amount = new BigDecimal(newAmount);
 	}
 	// Method
-	public void withdraw(String withdrawal) throws IllegalArgumentException {
+	public void withdraw(String withdrawal) throws IllegalWithdrawal {
 		BigDecimal desiredAmount = new BigDecimal(withdrawal);
 		// If desired amount is negative, throw an exception
 		if(desiredAmount.compareTo(BigDecimal.ZERO) < 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalWithdrawal("Illegal Withdrawal");
 		}
 		// If the amount is less than the desired amount, throw an exception
 		if(this.getAmount().compareTo(desiredAmount) < 0) {
-			throw new IllegalArgumentException();	
+			throw new IllegalWithdrawal("Illegal Withdrawal");
 		}
 		this.setAmount(this.getAmount().subtract(desiredAmount).toString());
 		System.out.println("Withdrawal: " + this);
 	}
 	// Method
-	public void deposit(String deposit) throws IllegalArgumentException {
+	public void deposit(String deposit) throws IllegalDeposit {
 		BigDecimal desiredAmount = new BigDecimal(deposit);
 		// If desired amount is negative, throw an exception 
 		if(desiredAmount.compareTo(BigDecimal.ZERO) < 0){
-			throw new IllegalArgumentException();			
+			throw new IllegalDeposit("Illegal Deposit");		
 		}
 		this.setAmount(this.getAmount().add(desiredAmount).toString());
 		System.out.println("Deposit: " + this);
