@@ -14,6 +14,10 @@ public abstract class Account implements Accountable {
 		this.amount.setScale(2, BigDecimal.ROUND_HALF_UP);
 		System.out.println("Account Created: " + this.getName());
 	}
+	// Constructor
+	public Account(String[] accountNameAndStartAmount){
+		this(accountNameAndStartAmount[0], accountNameAndStartAmount[1]);
+	}
 	// Method
 	public String getName(){
 		return this.name;

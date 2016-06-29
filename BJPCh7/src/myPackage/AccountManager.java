@@ -8,22 +8,22 @@ public class AccountManager {
 		// Try to create a savings account
 		try{
 			// Polymorphism: Accountable -> SavingsAccount
-			savingsAccount = new SavingsAccount("FirstSavingsAccount", "10.00");
-		}catch(IllegalAccount ia){
+			savingsAccount = new SavingsAccount("FirstSavingsAccount", "110.00");
+		}catch(Exception e){
 			//System.out.println("Illegal Account");
-			throw new IllegalAccount("Illegal Account");			
+			throw new IllegalAccount("Illegal Account");		
 		}
 		// Try to withdraw from the savings account
 		try{
 			savingsAccount.withdraw("5.00");
 		}catch(IllegalWithdrawal iw){
-			//System.out.println("Illegal Withdrawal
+			//System.out.println("Illegal Withdrawal");
 			throw new IllegalWithdrawal("Illegal Withdrawal");
 		}
 		// Try to create a checking account
 		try{
 			// Polymorphism: Accountable -> CheckingAccount
-			checkingAccount = new CheckingAccount("FirstCheckingAccount", "10.00", 1);
+			checkingAccount = new CheckingAccount("FirstCheckingAccount", "110.00", 1);
 		}catch(IllegalAccount ia){
 			//System.out.println("Illegal Account");
 			throw new IllegalAccount("Illegal Account");
@@ -51,4 +51,3 @@ public class AccountManager {
 		}		
 	}
 }
-

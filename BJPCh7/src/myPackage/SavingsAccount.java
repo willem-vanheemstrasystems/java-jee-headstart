@@ -6,15 +6,25 @@ public class SavingsAccount extends Account {
 	// Constructor
 	public SavingsAccount(String accountName, String startAmount) throws IllegalAccount, IllegalDeposit {
 		// Call super class constructor
-		super(accountName, startAmount);
-		if(isValidDeposit(startAmount)) {
-			// Give a bonus of $10 when opening the account
-			try{
-				this.deposit("10.00");
-			} catch(IllegalDeposit id){
-				throw new IllegalDeposit("Illegal Deposit");
-			}
+		super(superMethod(accountName, startAmount));
+		// Give a bonus of $10 when opening the account
+		try{
+			this.deposit("10.00");
+		} catch(IllegalDeposit id){
+			throw new IllegalDeposit("Illegal Deposit");
 		}
+	}
+	// Method
+	private static String[] superMethod(String accountName, String startAmount) throws IllegalAccount {
+		BigDecimal temp;
+		try{
+			temp = new BigDecimal(startAmount);
+		} catch(Exception e){
+			return new String[]{"",""};
+		}
+		if(temp.compareTo(BigDecimal.ZERO) > 0){
+			return new String[]{accountName, startAmount};
+		}		
 		else{
 			throw new IllegalAccount("Illegal Account");
 		}

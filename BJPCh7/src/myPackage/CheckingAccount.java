@@ -9,13 +9,25 @@ public class CheckingAccount extends Account {
 	// Constructor
 	public CheckingAccount(String accountName, String startAmount, int numberOfSignatories) throws IllegalAccount {
 		// Call super class constructor
-		super(accountName, startAmount);
-		if(isValidDeposit(startAmount)) {
-			this.setNumberOfSignatories(numberOfSignatories);
-		}
-		else {
+		super(superMethod(accountName, startAmount));
+		this.setNumberOfSignatories(numberOfSignatories);
+	}
+	// Method
+	private static String[] superMethod(String accountName, String startAmount) throws IllegalAccount {
+		BigDecimal temp;
+		try{
+			temp = new BigDecimal(startAmount);
+		} catch(Exception e){
 			throw new IllegalAccount("Illegal Account");
 		}
+		if(temp.compareTo(BigDecimal.ZERO) > 0) {
+			if(temp.add(new BigDecimal(startAmount)).compareTo(minimumBalance) > 0){
+				return new String[]{accountName, startAmount};
+			} else {
+				System.out.println("Account Creation: Checking Account Sorry, Minimum Balance of $" + minimumBalance + " not reached.");
+			}
+		}
+		throw new IllegalAccount("Illegal Account");
 	}
 	// Method
 	public int getNumberOfSignatories(){
@@ -70,7 +82,8 @@ public class CheckingAccount extends Account {
 			if(temp.add(this.getAmount()).compareTo(minimumBalance) > 0){
 				return true;
 			}
+			System.out.println("Account Creation: Checking Account Sorry, Minimum Balance of $" + minimumBalance + " not reached.");
 		}
 		return false;
-	}
+	}	
 }
