@@ -14,9 +14,17 @@ BJPCh6 - JUnitTest
 
 BJPCh7 - Account
 
+BJPCh7 - Accountable
+
 BJPCh7 - AccountManager
 
 BJPCh7 - CheckingAccount
+
+BJPCh7 - IllegalAccount
+
+BJPCh7 - IllegalDeposit
+
+BJPCh7 - IllegalWithdrawal
 
 BJPCh7 - Person
 
