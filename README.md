@@ -30,7 +30,10 @@ BJPCh7 - Person
 
 BJPCh7 - SavingsAccount
 
-BJPCh8 - FileCopier: uses FileInputStream, FileOutputStream
+BJPCh8 - FileCopierWithByteStreams: uses FileInputStream, FileOutputStream
 
 BJPCh8 - FormattingOutput: uses PrintStream
 
+BJPCh8 - FileCopierWithCharacterStreams: uses FileReader, FileWriter
+
+BJPCh8 - FileCopierWithBufferedStreams: uses BufferedReader, BufferedWriter
