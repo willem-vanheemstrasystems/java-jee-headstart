@@ -43,7 +43,7 @@ public class JDBCExample2 {
 			// Execute the query
 			ResultSet rs = preparedStatement.executeQuery();
 			// Check for empty result set
-			if(rs.wasNull()) { 
+			if( !rs.isBeforeFirst() ) { 
 				System.out.println("No records found");
 			}
 			// Process the result set
