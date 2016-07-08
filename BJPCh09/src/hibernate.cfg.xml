@@ -10,5 +10,6 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.current_session_context_class">thread</property>
 		<mapping class="myPackage.Employee" />
+		<mapping class="myPackage.Project" />
 	</session-factory>
 </hibernate-configuration>
