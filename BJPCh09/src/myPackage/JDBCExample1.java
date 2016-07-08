@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class JDBCExample1 {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Load the JDBC driver
 		try{
 			System.out.println("Loading JDBC driver ...");
 			Class.forName("com.mysql.jdbc.Driver");
