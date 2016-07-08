@@ -102,3 +102,7 @@ Once installed, add the path to the driver to Windows Environment Variables PATH
 Now add a reference to the driver as an external jar in Eclipse for this project.
 Choose Build Path > Configure Build Path > Add External JARs, then explicitely add the file C:\Program Files\MySQL\mysql-connector-java-5.1.39\mysql-connector-java-5.1.39-bin.jar
 
+See also 'High Performance JDBC' by Vlad Mihalcea (creator of Hibernate) at https://www.youtube.com/watch?v=u25Xc88d_iE&feature=youtu.be
+
+BJPCh09 - JDBCExample1
+
