@@ -39,3 +39,56 @@ BJPCh08 - FileCopierWithCharacterStreams: uses FileReader, FileWriter
 BJPCh08 - FileCopierWithBufferedStreams: uses BufferedReader, BufferedWriter
 
 BJPCh09 - Working with Databases in Java
+
+Note: download MySQL from http://www.mysql.com/downloads
+__
+
+''''
+
+CREATE SCHEMA `employeeschema` ;
+
+CREATE TABLE `employeeschema`.`department` (
+  `DepartmentID` INT NOT NULL,
+  `DepartmentName` VARCHAR(45) NULL DEFAULT NULL,
+  `DepartmentAddress` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`DepartmentID`));
+
+CREATE TABLE `employeeschema`.`employee` (
+  `EmployeeID` INT(11) NOT NULL,
+  `EmployeeName` VARCHAR(45) NULL DEFAULT NULL,
+  `EmployeeGender` VARCHAR(45) NULL DEFAULT NULL,
+  `DepartmentID` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`EmployeeID`),
+  INDEX `DepartmentIDForeign_idx_idx` (`DepartmentID` ASC),
+  CONSTRAINT `DepartmentIDForeign_idx`
+    FOREIGN KEY (`DepartmentID`)
+    REFERENCES `employeeschema`.`department` (`DepartmentID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+ENGINE = InnoDB
+
+''''
+__
+
+''''
+-- Insert data into department table
+insert into employeeschema.department
+values
+	(1,	'ITC', 'Brussels'),
+    (2, 'Marketing', 'New York'),
+    (3, 'Finance', 'Singapore'),
+    (4, 'Accounting', 'Sydney');
+''''
+__
+
+''''
+-- insert data in employee table
+insert into employeeschema.employee
+values
+	(1, 'Bart Baesens', 'Male', 1),
+    (2, 'Aimee Backiel', 'Female', 1),
+    (3, 'Seppe vanden Broucke', 'Male', 1),
+    (4, 'Michael Jackson', 'Male', 2),
+    (5, 'Sarah Adams', 'Female', 3);
+''''
