@@ -92,3 +92,13 @@ values
     (4, 'Michael Jackson', 'Male', 2),
     (5, 'Sarah Adams', 'Female', 3);
 ''''
+
+BJPCh09 - Java Database Connectivity (JDBC)
+
+Download JDBC Driver for MySQL for Java from http://dev.mysql.com/downloads/connector/j/
+
+Once installed, add the path to the driver to Windows Environment Variables PATH (e.g. C:\Program Files\MySQL\mysql-connector-java-5.1.39)
+
+Now add a reference to the driver as an external jar in Eclipse for this project.
+Choose Build Path > Configure Build Path > Add External JARs, then explicitely add the file C:\Program Files\MySQL\mysql-connector-java-5.1.39\mysql-connector-java-5.1.39-bin.jar
+
