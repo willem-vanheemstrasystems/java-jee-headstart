@@ -108,9 +108,11 @@ BJPCh09 - JDBCExample1: uses fixed query & statement
 
 BJPCh09 - JDBCExample1: uses keyboard input for query variable & prepared Statement
 
-#SQLJ
+#SQLJ vs JDBC
 
 SQLJ allows to embed SQL statements directly into Java programs.
+
+.sqlj extension
 
 #Hibernate
 
