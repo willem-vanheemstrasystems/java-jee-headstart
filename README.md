@@ -116,4 +116,9 @@ SQLJ allows to embed SQL statements directly into Java programs.
 
 #Hibernate
 
+Download hibernate from http://hibernate.org/orm/downloads
+Extract it (e.g. C:\hibernate-release-5.2.1.Final) and configure the Eclipse project by choosing 'Properties' > Java Build Path > Add Library. Define a User Library called 'MyHibernateLibrary' and add the files from the installed \lib\required\ directory.
+
+Note: MySQL JDBC driver is also still required as a Referenced Library, as installed for previous examples.
+
 BJPCh09 - Employee, myDBApp
