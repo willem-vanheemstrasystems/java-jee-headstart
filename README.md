@@ -104,5 +104,14 @@ Choose Build Path > Configure Build Path > Add External JARs, then explicitely a
 
 See also 'High Performance JDBC' by Vlad Mihalcea (creator of Hibernate) at https://www.youtube.com/watch?v=u25Xc88d_iE&feature=youtu.be
 
-BJPCh09 - JDBCExample1
+BJPCh09 - JDBCExample1: uses fixed query & statement
 
+BJPCh09 - JDBCExample1: uses keyboard input for query variable & prepared Statement
+
+#SQLJ
+
+SQLJ allows to embed SQL statements directly into Java programs.
+
+#Hibernate
+
+BJPCh09 - Employee, myDBApp
