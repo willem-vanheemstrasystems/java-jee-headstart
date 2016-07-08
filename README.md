@@ -122,3 +122,5 @@ Extract it (e.g. C:\hibernate-release-5.2.1.Final) and configure the Eclipse pro
 Note: MySQL JDBC driver is also still required as a Referenced Library, as installed for previous examples.
 
 BJPCh09 - Employee, myDBApp
+
+BJPCh09 - Project, myDBApp2
