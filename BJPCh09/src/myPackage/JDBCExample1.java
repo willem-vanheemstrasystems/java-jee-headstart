@@ -32,9 +32,10 @@ public class JDBCExample1 {
 			while(rs.next()){
 				// Print the first attribute (e.g. EmployeeName)
 				System.out.print(rs.getString(1));
-				System.out.print("   ");
+				System.out.print("\t\t");
 				// Print the second attribute (e.g. DepartmentName)
 				System.out.print(rs.getString(2));
+				System.out.print("\n");
 			}
 			stmt.close();
 		} catch(SQLException sqle) {
